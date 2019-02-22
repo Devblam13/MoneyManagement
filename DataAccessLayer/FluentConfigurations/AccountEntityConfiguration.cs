@@ -11,7 +11,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public AccountEntityConfiguration()
         {
-            this.HasKey(x => x.AccountId);
+            this.HasKey(x => x.AccountId).Property(x => x.AccountId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
+            this.Property(x => x.UserId).IsRequired();
         }
     }
 }

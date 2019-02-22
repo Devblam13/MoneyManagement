@@ -1,5 +1,5 @@
 ﻿using BusinessLogicLibrary.FilterModels;
-using DataAccessLayer;
+using CoreLibrary.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace BusinessLogicLibrary.ViewModels
 {
     public class BetsViewModel
     {
-        public List<Bet> Bets { get; set; } = new List<Bet>();
+        public List<BetDto> Bets { get; set; } = new List<BetDto>();
 
         public BetFilterModel Filter { get; set; } = new BetFilterModel();
 

@@ -1,4 +1,4 @@
-﻿using DataAccessLayer;
+﻿using CoreLibrary.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace BusinessLogicLibrary.Logic
 {
     public class BetCalculationHelper
     {
-        public Bet Bet { get; private set; }
+        public BetDto Bet { get; private set; }
 
         private decimal _totalOdds;
 
@@ -26,7 +26,7 @@ namespace BusinessLogicLibrary.Logic
             }
         }
 
-        public BetCalculationHelper(Bet bet)
+        public BetCalculationHelper(BetDto bet)
         {
             Bet = bet;
         }

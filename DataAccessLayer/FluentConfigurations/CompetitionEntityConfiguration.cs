@@ -13,7 +13,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public CompetitionEntityConfiguration()
         {
-            this.HasKey(x => x.CompetitionId).Property(x => x.Name).HasColumnAnnotation("Index", new IndexAnnotation(new[] { new IndexAttribute("Index") { IsUnique = true } }));
+            this.HasKey(x => x.CompetitionId).Property(x => x.Name).HasColumnAnnotation("Name", new IndexAnnotation(new[] { new IndexAttribute("Name") { IsUnique = true } }));
+            this.Property(x => x.CompetitionId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

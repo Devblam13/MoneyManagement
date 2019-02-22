@@ -8,7 +8,7 @@ namespace CommonLibrary
 {
     public enum AccountType
     {
-        All = 0,
+        All = ~0,
         WilliamHill = 1,
         BetFair = 2,
         SkyBet = 3,

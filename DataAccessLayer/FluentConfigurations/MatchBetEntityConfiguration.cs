@@ -11,7 +11,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public MatchBetEntityConfiguration()
         {
-            this.HasKey(x => x.MatchBetId);
+            this.HasKey(x => x.MatchBetId).HasRequired(x => x.Match).WithRequiredDependent();
+            this.Property(x => x.MatchBetId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

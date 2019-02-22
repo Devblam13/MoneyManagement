@@ -36,8 +36,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="Builders\PaymentsViewModelBuilder.cs" />
     <Compile Include="CsvMaps\PaymentsCsvMap.cs" />
-    <Compile Include="DataTransferObjects\PaymentDto.cs" />
     <Compile Include="FilterModels\BetFilterModel.cs" />
     <Compile Include="FilterModels\PaymentsFilterModel.cs" />
     <Compile Include="Logic\BetCalculationHelper.cs" />
@@ -70,12 +69,13 @@
       <Project>{1a592391-a405-4c56-9862-dcabe2957cf3}</Project>
       <Name>CommonLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{06bf9afe-cb30-421d-b6ba-b66d400c9cd3}</Project>
-      <Name>DataAccessLayer</Name>
+    <ProjectReference Include="..\CoreLibrary\CoreLibrary.csproj">
+      <Project>{35d29dff-a8ef-498b-8087-44b236aa0953}</Project>
+      <Name>CoreLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

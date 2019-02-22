@@ -1,30 +1,31 @@
-﻿using DataAccessLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommonLibrary;
+using CoreLibrary.DataTransferObjects;
 
 namespace BusinessLogicLibrary.Logic
 {
     public class ResultDecider
     {
-        public MatchBet MatchBet { get; private set; }
+        public MatchBetDto MatchBet { get; private set; }
 
-        public ResultDecider(MatchBet matchBet)
+        public ResultDecider(MatchBetDto matchBet)
         {
             MatchBet = matchBet;
         }
 
         public bool? IsMatchAWin()
         {
-            bool? isWin = null;
 
             if(MatchBet.Match.DateScored == null)
             {
                 return null;
             }
+
+            bool? isWin = false;
 
             int homeGoals = MatchBet.Match.HomeTeam.Goals;
             int awayGoals = MatchBet.Match.AwayTeam.Goals;

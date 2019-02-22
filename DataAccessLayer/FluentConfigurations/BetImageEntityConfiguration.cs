@@ -11,7 +11,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public BetImageEntityConfiguration()
         {
-            this.HasKey(x => x.BetImageId);
+            this.HasKey(x => x.BetImageId).Property(x => x.Image).IsRequired();
+            this.Property(x => x.BetImageId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

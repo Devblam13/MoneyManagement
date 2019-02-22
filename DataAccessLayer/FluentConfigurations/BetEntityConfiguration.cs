@@ -12,7 +12,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public BetEntityConfiguration()
         {
-            this.HasKey(x => x.BetId);
+            this.HasKey(x => x.BetId).HasRequired(x => x.Image).WithRequiredDependent();
+            this.Property(x => x.BetId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

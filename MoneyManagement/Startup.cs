@@ -1,5 +1,6 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using Unity;
 
 [assembly: OwinStartupAttribute(typeof(MoneyManagement.Startup))]
 namespace MoneyManagement

@@ -1,5 +1,5 @@
 ﻿using BusinessLogicLibrary.FilterModels;
-using DataAccessLayer;
+using CoreLibrary.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace BusinessLogicLibrary.ViewModels
     {
         public PaymentsFilterModel Filter { get; set; } = new PaymentsFilterModel();
 
-        public List<Payment> Payments { get; set; } = new List<Payment>();
+        public List<PaymentDto> Payments { get; set; } = new List<PaymentDto>();
 
         public PaymentsViewModel()
         {

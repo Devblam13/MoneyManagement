@@ -11,7 +11,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public LegacyBetEntityConfiguration()
         {
-            this.HasKey(x => x.LegacyBetId);
+            this.HasKey(x => x.LegacyBetId).HasRequired(x => x.Image).WithRequiredDependent();
+            this.Property(x => x.LegacyBetId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

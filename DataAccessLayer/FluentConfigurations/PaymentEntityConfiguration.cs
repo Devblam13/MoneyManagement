@@ -12,6 +12,7 @@ namespace DataAccessLayer.FluentConfigurations
         public PaymentEntityConfiguration()
         {
             this.HasKey(x => x.PaymentId);
+            this.Property(x => x.PaymentId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

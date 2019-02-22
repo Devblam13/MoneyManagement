@@ -14,7 +14,8 @@ namespace DataAccessLayer.FluentConfigurations
         public TeamEntityConfiguration()
         {
             this.HasKey(x => x.TeamId).Property(x => x.TeamName).IsRequired().HasMaxLength(100)
-                .HasColumnAnnotation("Index", new IndexAnnotation(new[] { new IndexAttribute("Index") { IsUnique = true } }));
+                .HasColumnAnnotation("TeamName", new IndexAnnotation(new[] { new IndexAttribute("TeamName") { IsUnique = true } }));
+            this.Property(x => x.TeamId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

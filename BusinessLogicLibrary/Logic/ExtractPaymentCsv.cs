@@ -1,5 +1,5 @@
 ﻿using BusinessLogicLibrary.CsvMaps;
-using BusinessLogicLibrary.DataTransferObjects;
+using CoreLibrary.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.IO;

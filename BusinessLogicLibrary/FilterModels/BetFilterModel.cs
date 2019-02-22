@@ -1,5 +1,5 @@
 ﻿using CommonLibrary;
-using DataAccessLayer;
+using CoreLibrary.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace BusinessLogicLibrary.FilterModels
         public decimal TotalOddsFrom { get; set; }
         public decimal TotalOddsTo { get; set; }
 
-        public Team LosingTeam { get; set; } = new Team();
+        public TeamDto LosingTeam { get; set; }
         public decimal PotentialReturnFrom { get; set; }
         public decimal PotentialReturnTo { get; set; }
         public DateTime DateFrom { get; set; }
@@ -35,6 +35,7 @@ namespace BusinessLogicLibrary.FilterModels
             AccountType = CommonLibrary.AccountType.All;
             NumberOfSelectionsFrom = 1;
             NumberOfSelectionsTo = 100;
+            LosingTeam = new TeamDto();
 
         }
     }

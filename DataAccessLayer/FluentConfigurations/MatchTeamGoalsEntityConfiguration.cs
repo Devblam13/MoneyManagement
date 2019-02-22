@@ -11,7 +11,8 @@ namespace DataAccessLayer.FluentConfigurations
     {
         public MatchTeamGoalsEntityConfiguration()
         {
-            this.HasKey(x => x.MatchTeamGoalsId);
+            this.HasKey(x => x.MatchTeamGoalsId).HasRequired(x => x.Team).WithRequiredDependent();
+            this.Property(x => x.MatchTeamGoalsId).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 }

@@ -75,6 +75,14 @@
     <Compile Include="Match.cs" />
     <Compile Include="MatchBet.cs" />
     <Compile Include="MatchTeamGoals.cs" />
+    <Compile Include="Migrations\201901041454193_Initial.cs" />
+    <Compile Include="Migrations\201901041454193_Initial.Designer.cs">
+      <DependentUpon>201901041454193_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901041513587_Initial_IdentityColumnInsert.cs" />
+    <Compile Include="Migrations\201901041513587_Initial_IdentityColumnInsert.Designer.cs">
+      <DependentUpon>201901041513587_Initial_IdentityColumnInsert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MoneyManagementDbContext.cs" />
     <Compile Include="Payment.cs" />
@@ -91,6 +99,13 @@
       <Name>CommonLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901041454193_Initial.resx">
+      <DependentUpon>201901041454193_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901041513587_Initial_IdentityColumnInsert.resx">
+      <DependentUpon>201901041513587_Initial_IdentityColumnInsert.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
